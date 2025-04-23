@@ -32,7 +32,7 @@ export default function Home() {
       <header className="header">
         <h1>Citazioni Casuali</h1>
         <p className="description">
-          Demo di un'app Next.js con App Router e API Routes
+          Demo di un'app Next.js con App Router e API Routes per NETLIFY
         </p>
       </header>
 
