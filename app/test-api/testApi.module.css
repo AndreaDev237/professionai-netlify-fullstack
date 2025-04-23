@@ -1,0 +1,202 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0070f3;
+  }
+  
+  .apiSection {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .apiSection h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #333;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 0.5rem;
+  }
+  
+  .button {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .button:hover:not(:disabled) {
+    background-color: #0051a2;
+  }
+  
+  .button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .quoteCard {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .userQuoteCard {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .quoteText {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  
+  .quoteAuthor {
+    text-align: right;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .quoteDate {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 0.5rem;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .formField {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .formField label {
+    font-weight: 500;
+  }
+  
+  .formField input,
+  .formField textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+  
+  .formField textarea {
+    resize: vertical;
+  }
+  
+  .errorMessage {
+    color: #d32f2f;
+    background-color: #ffebee;
+    padding: 0.75rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+  }
+  
+  .successMessage {
+    color: #388e3c;
+    background-color: #e8f5e9;
+    padding: 0.75rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+  }
+  
+  .userQuotesList {
+    margin-top: 1.5rem;
+  }
+  
+  .noQuotes {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .deleteButton {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  .deleteButton:hover:not(:disabled) {
+    background-color: #d32f2f;
+  }
+  
+  .apiDocumentation {
+    background-color: #272c34;
+    color: #f8f8f2;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  
+  .apiDocumentation pre {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+  }
+  
+  .apiDocumentation h2 {
+    color: #61dafb;
+    margin-top: 0;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+    
+    .title {
+      font-size: 1.7rem;
+    }
+    
+    .apiSection {
+      padding: 1rem;
+    }
+    
+    .quoteText {
+      font-size: 1rem;
+    }
+    
+    .button {
+      width: 100%;
+    }
+  }
