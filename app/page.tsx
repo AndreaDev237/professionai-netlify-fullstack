@@ -12,7 +12,7 @@ export default function Home() {
     setIsLoading(true);
     try {
       // Chiamata all'API route creata con App Router
-      const response = await fetch('/api/quotes');
+      const response = await fetch('/.netlify/functions/quotes');
       const data = await response.json();
       setQuote(data);
     } catch (error) {

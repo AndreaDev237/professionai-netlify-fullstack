@@ -20,7 +20,7 @@ export default function TestApi() {
   const fetchRandomQuote = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('/api/quotes');
+      const response = await fetch('/.netlify/functions/quotes');
       const data = await response.json();
       setRandomQuote(data);
       setFormError('');
@@ -36,7 +36,7 @@ export default function TestApi() {
   const fetchUserQuotes = async () => {
     setIsLoadingUser(true);
     try {
-      const response = await fetch('/api/quotes?source=user');
+      const response = await fetch('/.netlify/functions/quotes?source=user');
       if (response.ok) {
         const data = await response.json();
         setUserQuotes([data]); // Mettiamo la citazione in un array
@@ -70,7 +70,7 @@ export default function TestApi() {
     
     setIsLoading(true);
     try {
-      const response = await fetch('/api/quotes', {
+      const response = await fetch('/.netlify/functions/quotes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -105,7 +105,7 @@ export default function TestApi() {
   const deleteQuote = async (id) => {
     setIsLoading(true);
     try {
-      const response = await fetch(`/api/quotes?id=${id}`, {
+      const response = await fetch(`/.netlify/functions/quotes?id=${id}`, {
         method: 'DELETE',
       });
       
@@ -229,15 +229,15 @@ export default function TestApi() {
       <div className={styles.apiDocumentation}>
         <h2>Documentazione API</h2>
         <pre>{`
-# Endpoint: /api/quotes
+# Endpoint: /.netlify/functions/quotes
 
-## GET /api/quotes
+## GET /.netlify/functions/quotes
 Restituisce una citazione casuale dall'elenco predefinito.
 
-## GET /api/quotes?source=user
+## GET /.netlify/functions/quotes?source=user
 Restituisce una citazione casuale dall'elenco delle citazioni aggiunte dagli utenti.
 
-## POST /api/quotes
+## POST /.netlify/functions/quotes
 Aggiunge una nuova citazione.
 Body:
 {
@@ -245,7 +245,7 @@ Body:
   "author": "Autore della citazione"
 }
 
-## DELETE /api/quotes?id=123
+## DELETE /.netlify/functions/quotes?id=123
 Elimina una citazione specifica in base all'ID.
         `}</pre>
       </div>
